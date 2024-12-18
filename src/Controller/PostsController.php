@@ -63,7 +63,7 @@ class PostsController extends AbstractController
     public function show(Posts $post, SerializerInterface $serializer): JsonResponse
     {
         // Ici le troisième paramètre spécifie le groupe de sérialisation à utiliser, les groupes de sérialisation sont définis dans l'entité Posts
-      $post = $serializer->normalize($post, 'json', ['groups' => 'grp2']);
+      $post = $serializer->normalize($post, 'json', ['groups' => 'grp1']);
         return $this->json($post);
     }
 
